@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git diff:*)",
+      "Edit(docs/**)",
+      "Read(~/.zshrc)",
+      "WebFetch(domain:example.com)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Bash(rm -rf:*)",
+      "Bash(sudo :*)",
+      "Bash(su - :*)"
+    ],
+    "defaultMode": "plan"
+  }
+}

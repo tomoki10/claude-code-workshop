@@ -63,8 +63,7 @@ claude
 
 ## 拡張思考の有効化
 
-設計や要件定義などはこのモードに切り替えることで時間をかけて制度を高めて思考してくます。
-Tabを押すことで、思考のモードを切り替えられます。
+設計や要件定義などはこのモードに切り替えることで時間をかけて精度を高めて思考してくます。Tabを押すことで、思考のモードを切り替えられます。
 
 ## 読み取り専用/編集用モードの切り替え
 
@@ -78,6 +77,20 @@ AIコーディングエージェントには、大体2つのモードがあり�
 AIコーディングエージェントでは、Plan-Then-Executeというプロセスが推奨されます。
 
 まずは`plan mode`で実装の計画を立て、内容を確認します。人間が内容を確認して問題なければ`auto-accept edits`に切り替えて実行してもらいます。
+
+Claude Codeの起動時にデフォルトでPlan Modeを起動するには、以下のように`.claude/settings.json`か `.claude/settings.local.json`に`"defaultMode": "plan"` と設定すれば実現できます。
+
+```json
+{
+  "permissions": {
+    "allow": [...],
+    "deny": [...],
+    "defaultMode": "plan"
+  },
+...
+```
+
+Reference: https://code.claude.com/docs/en/iam#permission-modes
 
 ### ワーク0：Plan-Then-Executeを試す
 
